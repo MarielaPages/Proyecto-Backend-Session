@@ -18,7 +18,7 @@ app.use(session({
     saveUninitialized: false, // don't create session until something stored
     resave: false, //don't save session if unmodified
     store: MongoStore.create({mongoUrl:'mongodb+srv://Mariela:mongo1991@cluster0.ashm8.mongodb.net/?retryWrites=true&w=majority'}),
-    cookie: { maxAge: 30000}
+    cookie: { maxAge: 600000} // 10 minutos para que la sesion expire
 }))
 app.use('/session', routeSession)
 
